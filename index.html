@@ -75,8 +75,8 @@
             <audio id="sound-2" src="audio/sound-2.aac" crossorigin="anonymous" preload="true"></audio>
             <img   id="gif-2" src="img/gif-2.gif" crossorigin="anonymous" preload="true">
 
-            <!-- <video id="video-3" src="video/video-3.mp4" loop="true" crossorigin="anonymous" preload="true"></video> -->
-            <video id="video-3" src="video/test.mp4" loop="true" crossorigin="anonymous" preload="true"></video>
+            <video id="video-3" src="video/video-3.mp4" loop="true" crossorigin="anonymous" preload="true"></video>
+            <!-- <video id="video-3" src="video/test.mp4" loop="true" crossorigin="anonymous" preload="true"></video> -->
             <audio id="voice-3" src="audio/voice-3.aac" crossorigin="anonymous" preload="true"></audio>
             <audio id="sound-3" src="audio/sound-3.aac" crossorigin="anonymous" preload="true"></audio>
             <img   id="gif-3" src="img/gif-3.gif" crossorigin="anonymous" preload="true">
@@ -150,8 +150,6 @@
         <a-sphere class="sphereActive" position="0 2 0" radius="50" material="src: #img-1" rotation="0 180 0" side="double" visible="false" sound="src:#sound-1; autoplay:false; loop:true; volume:4;"></a-sphere>
         <a-sphere class="is-video" position="0 2 -100" radius="50" material="shader:video; src:#video-2; side:double;" rotation="0 180 0" side="double" visible="false" sound="src:#sound-2; autoplay:false; loop:true; volume:4;"></a-sphere>
 
-        <!-- <a-entity id="aux" class="is-video" geometry="primitive:plane;" position="0 -100 0" material="shader:video; src:#video-3;" visible="false"></a-entity> -->
-
         <a-entity id="action" geometry="primitive:plane;" position="0 -100 0" material="shader:gif; src:url(img/gif-1.gif); transparent:true; opacity:.7;"></a-entity>
 
         <a-entity id="sound" position="0 1.5 0">
@@ -186,7 +184,7 @@
         (function() {
 
             console.log('app start');
-            console.log('test 19');
+            console.log('test 20');
 
             //SETTINGS
             var currentScene = 0;
