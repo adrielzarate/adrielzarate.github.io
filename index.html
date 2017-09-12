@@ -149,6 +149,8 @@
         <a-sphere class="sphereActive" position="0 2 0" radius="50" material="src: #img-1" rotation="0 180 0" side="double" visible="false" sound="src:#sound-1; autoplay:false; loop:true; volume:4;"></a-sphere>
         <a-sphere class="is-video" position="0 2 -100" radius="50" material="shader:video; src:#video-2; side:double;" rotation="0 180 0" side="double" visible="false" sound="src:#sound-2; autoplay:false; loop:true; volume:4;"></a-sphere>
 
+        <a-entity id="aux" geometry="primitive:plane;" position="0 -100 0" material="shader:video; src:#video-3;" visible="false"></a-entity>
+
         <a-entity id="action" geometry="primitive:plane;" position="0 -100 0" material="shader:gif; src:url(img/gif-1.gif); transparent:true; opacity:.7;"></a-entity>
 
         <a-entity id="sound" position="0 1.5 0">
@@ -243,7 +245,7 @@
             var voice = document.querySelector('#sound a-entity');
             var es4Screen = document.querySelector('.es4-screen');
             var video2 = document.querySelector('#video-2');
-            // var video3 = document.querySelector('#video-3');
+            var video3 = document.querySelector('#video-3');
 
             function init() {
                 console.log('you are in escene number: ' + (currentScene + 1));
@@ -319,9 +321,11 @@
                         togglePlayback();
                         break;
                     case 2:
+                        video3.play();
+                        video3.pause();
                         togglePlayback();
                         togglePlayback();
-                        console.log('test 12');
+                        console.log('test 13');
                         break;
                     case 3:
                         es4Screen.setAttribute('visible','true');
