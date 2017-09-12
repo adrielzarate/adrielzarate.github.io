@@ -170,10 +170,10 @@
         <!-- elements scene 5 -->
 		<a-entity class="es5-particle" position="0 2.25 0" particle-system="preset:snow; texture:img/0.png; size:3;" visible="false"></a-entity>
 		<a-entity class="es5-particle" position="0 2.25 0" particle-system="preset:snow; texture:img/1.png; size:3;" visible="false"></a-entity>
-		<a-entity class="es5-particle" position="0 2.25 0" particle-system="preset:snow; texture:img/0.png; size:2;" visible="false"></a-entity>
-		<a-entity class="es5-particle" position="0 2.25 0" particle-system="preset:snow; texture:img/1.png; size:2;" visible="false"></a-entity>
-		<a-entity class="es5-particle" position="0 2.25 0" particle-system="preset:rain; texture:img/0.png; size:2;" visible="false"></a-entity>
-		<a-entity class="es5-particle" position="0 2.25 0" particle-system="preset:rain; texture:img/1.png; size:2;" visible="false"></a-entity>
+		<!-- <a-entity class="es5-particle" position="0 2.25 0" particle-system="preset:snow; texture:img/0.png; size:2;" visible="false"></a-entity> -->
+		<!-- <a-entity class="es5-particle" position="0 2.25 0" particle-system="preset:snow; texture:img/1.png; size:2;" visible="false"></a-entity> -->
+		<!-- <a-entity class="es5-particle" position="0 2.25 0" particle-system="preset:rain; texture:img/0.png; size:2;" visible="false"></a-entity> -->
+		<!-- <a-entity class="es5-particle" position="0 2.25 0" particle-system="preset:rain; texture:img/1.png; size:2;" visible="false"></a-entity> -->
 
     </a-scene>
 
@@ -260,7 +260,8 @@
                 if (currentScene > 0 && currentScene < indexLastScene) {
                     if( assets.key(currentScene + 1).esceneBgMaterial == 'video' ){
                         sphereNoActive.classList.add("is-video");
-                        sphereNoActive.setAttribute('material', 'shader:video; src:' + assets.key(currentScene + 1).esceneBg + '; side:double;' );
+                        // sphereNoActive.setAttribute('material', 'shader:video; src:' + assets.key(currentScene + 1).esceneBg + '; side:double;' );
+                        sphereNoActive.setAttribute('material', 'shader:video; src:#video3; side:double;' );
                     } else {
                         sphereNoActive.classList.remove("is-video");
                         sphereNoActive.setAttribute('material', 'shader:flat; src:' + assets.key(currentScene + 1).esceneBg );
@@ -321,7 +322,7 @@
                     case 2:
                         togglePlayback();
                         togglePlayback();
-                        console.log('test 6');
+                        console.log('test 8');
                         break;
                     case 3:
                         es4Screen.setAttribute('visible','true');
