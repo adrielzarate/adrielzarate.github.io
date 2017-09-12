@@ -17,7 +17,7 @@
 
     <script src="js/aframe-vid-shader.min.js"></script>
 
-    <!--script src="js/aframe-particle-system-component.min.js"></script-->
+    <script src="js/aframe-particle-system-component.min.js"></script>
 
     <script src="js/aframe-preloader-component.min.js"></script>
 
@@ -186,7 +186,7 @@
         (function() {
 
             console.log('app start');
-            console.log('test 28');
+            console.log('test 29');
 
             //SETTINGS
             var currentScene = 0;
@@ -330,13 +330,14 @@
 
                 switch(currentScene) {
                     case 1:
-                        togglePlayback();
+                        // togglePlayback();
                         break;
                     case 2:
-                        togglePlayback();
+                        // togglePlayback();
                         togglePlayback();
                         break;
                     case 3:
+                        togglePlayback();
                         es4Screen.setAttribute('visible','true');
                         break;
                     case 4:
