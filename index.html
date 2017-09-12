@@ -75,7 +75,7 @@
             <audio id="sound-2" src="audio/sound-2.aac" crossorigin="anonymous" preload="true"></audio>
             <img   id="gif-2" src="img/gif-2.gif" crossorigin="anonymous" preload="true">
 
-            <video id="video3" src="video/video-3.mp4" loop="true" crossorigin="anonymous" preload="true"></video>
+            <video id="video-3" src="video/video-3.mp4" loop="true" crossorigin="anonymous" preload="true"></video>
             <audio id="voice-3" src="audio/voice-3.aac" crossorigin="anonymous" preload="true"></audio>
             <audio id="sound-3" src="audio/sound-3.aac" crossorigin="anonymous" preload="true"></audio>
             <img   id="gif-3" src="img/gif-3.gif" crossorigin="anonymous" preload="true">
@@ -172,8 +172,8 @@
 		<a-entity class="es5-particle" position="0 2.25 0" particle-system="preset:snow; texture:img/1.png; size:3;" visible="false"></a-entity>
 		<!-- <a-entity class="es5-particle" position="0 2.25 0" particle-system="preset:snow; texture:img/0.png; size:2;" visible="false"></a-entity> -->
 		<!-- <a-entity class="es5-particle" position="0 2.25 0" particle-system="preset:snow; texture:img/1.png; size:2;" visible="false"></a-entity> -->
-		<!-- <a-entity class="es5-particle" position="0 2.25 0" particle-system="preset:rain; texture:img/0.png; size:2;" visible="false"></a-entity> -->
-		<!-- <a-entity class="es5-particle" position="0 2.25 0" particle-system="preset:rain; texture:img/1.png; size:2;" visible="false"></a-entity> -->
+		<a-entity class="es5-particle" position="0 2.25 0" particle-system="preset:rain; texture:img/0.png; size:2;" visible="false"></a-entity>
+		<a-entity class="es5-particle" position="0 2.25 0" particle-system="preset:rain; texture:img/1.png; size:2;" visible="false"></a-entity>
 
     </a-scene>
 
@@ -204,17 +204,9 @@
                     actionImg: 'gif-2',
                     actionPosition: { x: 0, y: 1.5, z: -1 }
                 },
-                // escene3: {
-                //     esceneBgMaterial: 'video',
-                //     esceneBg: '#video3',
-                //     esceneVoice: '#voice-3',
-                //     esceneSound: '#sound-3',
-                //     actionImg: 'gif-3',
-                //     actionPosition: { x: 0, y: 1.5, z: -1 }
-                // },
                 escene3: {
-                    esceneBgMaterial: 'img',
-                    esceneBg: '#img-4',
+                    esceneBgMaterial: 'video',
+                    esceneBg: '#video-2',
                     esceneVoice: '#voice-3',
                     esceneSound: '#sound-3',
                     actionImg: 'gif-3',
@@ -251,7 +243,7 @@
             var voice = document.querySelector('#sound a-entity');
             var es4Screen = document.querySelector('.es4-screen');
             var video2 = document.querySelector('#video-2');
-            var video3 = document.querySelector('#video3');
+            // var video3 = document.querySelector('#video-3');
 
             function init() {
                 console.log('you are in escene number: ' + (currentScene + 1));
@@ -329,7 +321,7 @@
                     case 2:
                         togglePlayback();
                         togglePlayback();
-                        console.log('test 11');
+                        console.log('test 12');
                         break;
                     case 3:
                         es4Screen.setAttribute('visible','true');
