@@ -75,7 +75,7 @@
             <audio id="sound-2" src="audio/sound-2.aac" crossorigin="anonymous" preload="true"></audio>
             <img   id="gif-2" src="img/gif-2.gif" crossorigin="anonymous" preload="true">
 
-            <video id="video-3" src="video/video-3.mp4" loop="true" crossorigin="anonymous" preload="true"></video>
+            <video id="video3" src="video/video-3.mp4" loop="true" crossorigin="anonymous" preload="true"></video>
             <audio id="voice-3" src="audio/voice-3.aac" crossorigin="anonymous" preload="true"></audio>
             <audio id="sound-3" src="audio/sound-3.aac" crossorigin="anonymous" preload="true"></audio>
             <img   id="gif-3" src="img/gif-3.gif" crossorigin="anonymous" preload="true">
@@ -206,7 +206,7 @@
                 },
                 escene3: {
                     esceneBgMaterial: 'video',
-                    esceneBg: 'video/video-3.mp4',
+                    esceneBg: '#video3',
                     esceneVoice: '#voice-3',
                     esceneSound: '#sound-3',
                     actionImg: 'gif-3',
@@ -243,7 +243,7 @@
             var voice = document.querySelector('#sound a-entity');
             var es4Screen = document.querySelector('.es4-screen');
             var video2 = document.querySelector('#video-2');
-            var video3 = document.querySelector('#video-3');
+            var video3 = document.querySelector('#video3');
 
             function init() {
                 console.log('you are in escene number: ' + (currentScene + 1));
