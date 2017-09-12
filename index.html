@@ -259,11 +259,11 @@
 
                 if (currentScene > 0 && currentScene < indexLastScene) {
                     if( assets.key(currentScene + 1).esceneBgMaterial == 'video' ){
-                        sphereNoActive.setAttribute('material', 'shader:video; src:' + assets.key(currentScene + 1).esceneBg + '; side:double;' );
                         sphereNoActive.classList.add("is-video");
+                        sphereNoActive.setAttribute('material', 'shader:video; src:' + assets.key(currentScene + 1).esceneBg + '; side:double;' );
                     } else {
-                        sphereNoActive.setAttribute('material', 'shader:flat; src:' + assets.key(currentScene + 1).esceneBg );
                         sphereNoActive.classList.remove("is-video");
+                        sphereNoActive.setAttribute('material', 'shader:flat; src:' + assets.key(currentScene + 1).esceneBg );
                     }
                 }
 
@@ -321,6 +321,7 @@
                     case 2:
                         togglePlayback();
                         togglePlayback();
+                        console.log('test 5');
                         break;
                     case 3:
                         es4Screen.setAttribute('visible','true');
