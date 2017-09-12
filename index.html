@@ -206,7 +206,7 @@
                 },
                 escene3: {
                     esceneBgMaterial: 'video',
-                    esceneBg: '#video-3',
+                    esceneBg: 'video/video-3.mp4',
                     esceneVoice: '#voice-3',
                     esceneSound: '#sound-3',
                     actionImg: 'gif-3',
@@ -350,13 +350,12 @@
             sound.addEventListener('sound-ended', enableNext, false);
             trigger.addEventListener('animationend', goNextScene, false);
 
-            document.querySelector('#preloaderModal button').addEventListener('click', function(){
-                // document.querySelector('#video-2').play();
-                // document.querySelector('#video-2').pause();
-                // document.querySelector('#video-3').play();
-                // document.querySelector('#video-3').pause();
-                // togglePlayback();
-                console.log('test 3')
+            preloaderModal.querySelector('button').addEventListener('click', function(){
+                video2.play();
+                video2.pause();
+                video3.play();
+                video3.pause();
+                togglePlayback();
             }, false);
 
             action.onmouseenter = function (e) {
