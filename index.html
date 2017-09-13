@@ -183,7 +183,7 @@
         (function() {
 
             console.log('app start');
-            console.log('test 38');
+            console.log('test 39');
 
             //SETTINGS
             var currentScene = 0;
@@ -341,6 +341,7 @@
                           s.parentNode.insertBefore(o, s);
                         }
                         async('adrielzarate.github.io/js/aframe-particle-system-component.min.js', function() {
+                            console.log('script loaded!');
                             for (var i = 0; i < es5Particle.length; i++) {
                                 es5Particle[i].setAttribute('visible','true');
                             }
