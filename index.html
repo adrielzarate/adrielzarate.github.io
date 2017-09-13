@@ -17,8 +17,6 @@
 
     <script src="js/aframe-vid-shader.min.js"></script>
 
-    <!--script src="js/aframe-particle-system-component.min.js"></script-->
-
     <script src="js/aframe-preloader-component.min.js"></script>
 
 </head>
@@ -168,12 +166,7 @@
         <a-entity class="es4-screen" position="-14.5 1.2 14.7" rotation="0 130 0" geometry="primitive:plane; height: 12.5; width: 8" material="shader:gif;src:url(img/es4-screen.gif);opacity:1" visible="false"></a-entity>
 
         <!-- elements scene 5 -->
-		<a-entity class="es5-particle" position="0 2.25 0" particle-system="preset:snow; texture:img/0.png; size:3; maxAge:6;"></a-entity>
-		<a-entity class="es5-particle" position="0 2.25 0" particle-system="preset:snow; texture:img/1.png; size:3; maxAge:6;"></a-entity>
-		<a-entity class="es5-particle" position="0 2.25 0" particle-system="preset:snow; texture:img/0.png; size:2; maxAge:6;"></a-entity>
-		<a-entity class="es5-particle" position="0 2.25 0" particle-system="preset:snow; texture:img/1.png; size:2; maxAge:6;"></a-entity>
-		<a-entity class="es5-particle" position="0 2.25 0" particle-system="preset:rain; texture:img/0.png; size:2; maxAge:6;"></a-entity>
-		<a-entity class="es5-particle" position="0 2.25 0" particle-system="preset:rain; texture:img/1.png; size:2; maxAge:6;"></a-entity>
+		<!-- ... -->
 
     </a-scene>
 
@@ -183,7 +176,6 @@
         (function() {
 
             console.log('app start');
-            console.log('test 40');
 
             //SETTINGS
             var currentScene = 0;
@@ -245,7 +237,6 @@
             var sphereNoActive = document.querySelector('a-sphere:not(.sphereActive)');
             var voice = document.querySelector('#sound a-entity');
             var es4Screen = document.querySelector('.es4-screen');
-            // var video2 = document.querySelector('#video-2');
             var video3 = document.querySelector('#video-3');
 
             function init() {
@@ -319,9 +310,6 @@
                 voice.components.sound.playSound();
 
                 switch(currentScene) {
-                    case 1:
-                        // togglePlayback();
-                        break;
                     case 2:
                         togglePlayback();
                         togglePlayback();
@@ -331,22 +319,6 @@
                         break;
                     case 4:
                         es4Screen.setAttribute('visible','false');
-                        function async(u, c) {
-                          var d = document,
-                              t = 'script',
-                              o = d.createElement(t),
-                              s = d.getElementsByTagName(t)[0];
-                          o.src = '//' + u;
-                          if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
-                          s.parentNode.insertBefore(o, s);
-                        }
-                        async('adrielzarate.github.io/js/aframe-particle-system-component.min.js', function() {
-                            console.log('script loaded!');
-                            AFRAME.components['particle-system'].Component.prototype.init()
-                            // for (var i = 0; i < es5Particle.length; i++) {
-                                // es5Particle[i].setAttribute('visible','true');
-                            // }
-                        });
                         break;
                 }
 
@@ -367,11 +339,8 @@
             trigger.addEventListener('animationend', goNextScene, false);
 
             preloaderModal.querySelector('button').addEventListener('click', function(){
-                // video2.play();
-                // video2.pause();
                 video3.play();
                 video3.pause();
-                // togglePlayback();
             }, false);
 
             action.onmouseenter = function (e) {
