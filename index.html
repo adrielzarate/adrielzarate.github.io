@@ -171,10 +171,10 @@
         <a-entity class="es4-screen" position="-14.5 1.2 14.7" rotation="0 130 0" geometry="primitive:plane; height: 12.5; width: 8" material="shader:gif;src:url(img/es4-screen.gif);opacity:1" visible="false"></a-entity>
 
         <!-- elements scene 5 -->
-		<a-entity class="es5-particle" position="0 2.25 0" particle-system="preset:snow; texture:img/0.png; size:3;" visible="false"></a-entity>
-		<a-entity class="es5-particle" position="0 2.25 0" particle-system="preset:snow; texture:img/1.png; size:3;" visible="false"></a-entity>
-		<a-entity class="es5-particle" position="0 2.25 0" particle-system="preset:snow; texture:img/0.png; size:2;" visible="false"></a-entity>
-		<a-entity class="es5-particle" position="0 2.25 0" particle-system="preset:snow; texture:img/1.png; size:2;" visible="false"></a-entity>
+		<!-- <a-entity class="es5-particle" position="0 2.25 0" particle-system="preset:snow; texture:img/0.png; size:3;" visible="false"></a-entity> -->
+		<!-- <a-entity class="es5-particle" position="0 2.25 0" particle-system="preset:snow; texture:img/1.png; size:3;" visible="false"></a-entity> -->
+		<!-- <a-entity class="es5-particle" position="0 2.25 0" particle-system="preset:snow; texture:img/0.png; size:2;" visible="false"></a-entity> -->
+		<!-- <a-entity class="es5-particle" position="0 2.25 0" particle-system="preset:snow; texture:img/1.png; size:2;" visible="false"></a-entity> -->
 		<a-entity class="es5-particle" position="0 2.25 0" particle-system="preset:rain; texture:img/0.png; size:2;" visible="false"></a-entity>
 		<a-entity class="es5-particle" position="0 2.25 0" particle-system="preset:rain; texture:img/1.png; size:2;" visible="false"></a-entity>
 
@@ -186,7 +186,7 @@
         (function() {
 
             console.log('app start');
-            console.log('test 29');
+            console.log('test 30');
 
             //SETTINGS
             var currentScene = 0;
@@ -248,7 +248,7 @@
             var indexLastScene = 4;
             var triggerAnimation = '<a-animation attribute="width" dur="3000" easing="ease-out" from="0" to="0.5">';
             var endAnimation = '<a-animation attribute="opacity" from="1" to="0" delay="3000" dur="3000"></a-animation>';
-            var es5Particles = '<a-animation attribute="opacity" from="1" to="0" delay="3000" dur="3000"></a-animation>';
+            var es5Particle = document.querySelectorAll('.es5-particle');
 
             var scene = document.querySelectorAll('a-scene');
             var sphere = document.querySelectorAll('a-sphere');
@@ -256,7 +256,7 @@
             var sphereNoActive = document.querySelector('a-sphere:not(.sphereActive)');
             var voice = document.querySelector('#sound a-entity');
             var es4Screen = document.querySelector('.es4-screen');
-            var video2 = document.querySelector('#video-2');
+            // var video2 = document.querySelector('#video-2');
             var video3 = document.querySelector('#video-3');
 
             function init() {
@@ -337,12 +337,10 @@
                         togglePlayback();
                         break;
                     case 3:
-                        togglePlayback();
                         es4Screen.setAttribute('visible','true');
                         break;
                     case 4:
                         es4Screen.setAttribute('visible','false');
-                        var es5Particle = document.querySelectorAll('.es5-particle');
                         for (var i = 0; i < es5Particle.length; i++) {
                             es5Particle[i].setAttribute('visible','true');
                         }
@@ -366,8 +364,8 @@
             trigger.addEventListener('animationend', goNextScene, false);
 
             preloaderModal.querySelector('button').addEventListener('click', function(){
-                video2.play();
-                video2.pause();
+                // video2.play();
+                // video2.pause();
                 video3.play();
                 video3.pause();
                 togglePlayback();
