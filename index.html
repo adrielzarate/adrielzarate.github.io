@@ -17,7 +17,7 @@
 
     <script src="js/aframe-vid-shader.min.js"></script>
 
-    <script src="js/aframe-particle-system-component.min.js"></script>
+    <!--script src="js/aframe-particle-system-component.min.js"></script-->
 
     <script src="js/aframe-preloader-component.min.js"></script>
 
@@ -152,6 +152,8 @@
         <!-- <a-sphere class="is-video" position="0 2 -100" radius="50" material="shader:video; src:#video-2; side:double;" rotation="0 180 0" side="double" visible="false" sound="src:#sound-2; autoplay:false; loop:true; volume:4;"></a-sphere> -->
         <a-sphere position="0 2 -100" radius="50" material="src: #img-2" rotation="0 180 0" side="double" visible="false" sound="src:#sound-2; autoplay:false; loop:true; volume:4;"></a-sphere>
 
+        <a-entity class="is-video" geometry="primitive:plane;" width=".1" height=".1" position="0 0 -100" material="shader:video; src:#video-2;" visible="false"></a-entity>
+
         <a-entity id="action" geometry="primitive:plane;" position="0 -100 0" material="shader:gif; src:url(img/gif-1.gif); transparent:true; opacity:.7;"></a-entity>
 
         <a-entity id="sound" position="0 1.5 0">
@@ -186,7 +188,7 @@
         (function() {
 
             console.log('app start');
-            console.log('test 30');
+            console.log('test 31');
 
             //SETTINGS
             var currentScene = 0;
