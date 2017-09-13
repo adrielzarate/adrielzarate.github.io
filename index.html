@@ -168,12 +168,12 @@
         <a-entity class="es4-screen" position="-14.5 1.2 14.7" rotation="0 130 0" geometry="primitive:plane; height: 12.5; width: 8" material="shader:gif;src:url(img/es4-screen.gif);opacity:1" visible="false"></a-entity>
 
         <!-- elements scene 5 -->
-		<a-entity class="es5-particle" position="0 2.25 0" particle-system="preset:snow; texture:img/0.png; size:3;" visible="false"></a-entity>
-		<a-entity class="es5-particle" position="0 2.25 0" particle-system="preset:snow; texture:img/1.png; size:3;" visible="false"></a-entity>
-		<a-entity class="es5-particle" position="0 2.25 0" particle-system="preset:snow; texture:img/0.png; size:2;" visible="false"></a-entity>
-		<a-entity class="es5-particle" position="0 2.25 0" particle-system="preset:snow; texture:img/1.png; size:2;" visible="false"></a-entity>
-		<a-entity class="es5-particle" position="0 2.25 0" particle-system="preset:rain; texture:img/0.png; size:2;" visible="false"></a-entity>
-		<a-entity class="es5-particle" position="0 2.25 0" particle-system="preset:rain; texture:img/1.png; size:2;" visible="false"></a-entity>
+		<a-entity class="es5-particle" position="0 2.25 0" particle-system="preset:snow; texture:img/0.png; size:3; maxAge:6;"></a-entity>
+		<a-entity class="es5-particle" position="0 2.25 0" particle-system="preset:snow; texture:img/1.png; size:3; maxAge:6;"></a-entity>
+		<a-entity class="es5-particle" position="0 2.25 0" particle-system="preset:snow; texture:img/0.png; size:2; maxAge:6;"></a-entity>
+		<a-entity class="es5-particle" position="0 2.25 0" particle-system="preset:snow; texture:img/1.png; size:2; maxAge:6;"></a-entity>
+		<a-entity class="es5-particle" position="0 2.25 0" particle-system="preset:rain; texture:img/0.png; size:2; maxAge:6;"></a-entity>
+		<a-entity class="es5-particle" position="0 2.25 0" particle-system="preset:rain; texture:img/1.png; size:2; maxAge:6;"></a-entity>
 
     </a-scene>
 
@@ -183,7 +183,7 @@
         (function() {
 
             console.log('app start');
-            console.log('test 39');
+            console.log('test 40');
 
             //SETTINGS
             var currentScene = 0;
@@ -342,9 +342,10 @@
                         }
                         async('adrielzarate.github.io/js/aframe-particle-system-component.min.js', function() {
                             console.log('script loaded!');
-                            for (var i = 0; i < es5Particle.length; i++) {
-                                es5Particle[i].setAttribute('visible','true');
-                            }
+                            AFRAME.components['particle-system'].Component.prototype.init()
+                            // for (var i = 0; i < es5Particle.length; i++) {
+                                // es5Particle[i].setAttribute('visible','true');
+                            // }
                         });
                         break;
                 }
