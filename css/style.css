@@ -1,0 +1,86 @@
+*::before,
+*::after,
+html,
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+}
+
+html,
+body {
+    font-size: 14px;
+    color: #1E1E1E;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+nav {
+    max-width: 1000px;
+    margin: auto;
+    padding-top: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+nav .underline {
+    text-decoration: underline;
+    margin: 0 4px;
+}
+
+nav .emoji {
+    font-size: 2rem;
+    line-height: 0;
+    margin-right: 4px;
+}
+
+.links ul {
+    grid-column: 2;
+    list-style: none;
+    padding: 0;
+}
+
+.links li {
+    display: inline-block;
+}
+
+.links a::after {
+    content: "·";
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.links li:last-child a::after {
+    content: none;
+}
+
+@view-transition {
+    navigation: auto;
+    types: slide, forwards;
+}
+
+.intro h1 {
+    view-transition-name: adriel;
+}
+
+.intro h2 {
+    view-transition-name: role;
+}
+
+.intro .about {
+    view-transition-name: about;
+}
+
+::view-transition-group(*) {
+    animation-duration: .5s;
+}
